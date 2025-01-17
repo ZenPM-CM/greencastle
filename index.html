@@ -1,0 +1,219 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GreenCastle - Servidor de Minecraft con modalidades únicas en cada stream">
+  <title>GreenCastle - Servidor de Minecraft</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Add Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Add CountUp.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="#2ac148"/>
+          <path d="M12 16h16v16H12z" fill="#1a8830"/>
+          <path d="M16 20h8v12h-8z" fill="#32e854"/>
+        </svg>
+        GreenCastle
+      </div>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#como-funciona">Modalidades</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#creador">Creador</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div id="particles-js"></div>
+      <div class="hero-content">
+        <h1>GreenCastle</h1>
+        <p>La mejor experiencia de Minecraft con modalidades únicas en cada stream</p>
+        <div class="server-status">
+          <div class="status-indicator"></div>
+          <span class="status-text">Verificando estado...</span>
+          <span class="player-count"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <h2>Modalidades</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h3>Modalidades Rotativas</h3>
+          <p>Cada stream presenta una modalidad diferente, manteniendo la experiencia fresca y emocionante.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Minijuegos</h3>
+          <p>Disfruta de una variedad de minijuegos únicos diseñados para la comunidad.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Eventos Especiales</h3>
+          <p>Participa en eventos exclusivos con premios y sorpresas para los viewers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <h2>Historia del Servidor</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>16/01/2025</h3>
+            <p>Nacimiento de GreenCastle, creado por Alexandre2023 con la visión de unir a la comunidad a través de diferentes modalidades de juego.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="creador">
+      <h2>Creador</h2>
+      <div class="creator-card">
+        <div class="creator-avatar">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="50" r="30" fill="#2ac148"/>
+            <rect x="30" y="85" width="60" height="35" fill="#1a8830"/>
+            <circle cx="45" cy="45" r="5" fill="#fff"/>
+            <circle cx="75" cy="45" r="5" fill="#fff"/>
+            <path d="M45 65 Q60 75 75 65" stroke="#fff" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+        <h3>Alexandre2023</h3>
+        <p>Youtuber / Streamer</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@Alexandre2023" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" fill="#fff"/>
+            </svg>
+          </a>
+          <a href="https://www.twitch.tv/alexandre2023333" aria-label="Twitch">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill="#fff"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="estadisticas" class="stats-section">
+      <h2>Estadísticas del Servidor</h2>
+      <div class="stats-grid">
+        <div class="stats-card">
+          <h3>Jugadores Totales</h3>
+          <div id="totalPlayers" class="counter">0</div>
+        </div>
+        <div class="stats-card">
+          <h3>Tiempo en Línea</h3>
+          <div id="uptime" class="counter">0</div>
+          <span>días</span>
+        </div>
+        <div class="stats-card">
+          <h3>Modalidades</h3>
+          <div id="gamemodes" class="counter">0</div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <canvas id="playerChart"></canvas>
+      </div>
+    </section>
+
+    <section id="modalidades-actuales">
+      <h2>Modalidades Actuales</h2>
+      <div class="gamemode-carousel">
+        <div class="gamemode-slide active">
+          <div class="gamemode-card">
+            <h3>Survival</h3>
+            <p>Sobrevive y construye en nuestro mundo único</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+              <span>85% Popularidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="gamemode-slide">
+          <div class="gamemode-card">
+            <h3>Bedwars</h3>
+            <p>Protege tu cama y destruye las de tus enemigos</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+              <span>90% Popularidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="gamemode-slide">
+          <div class="gamemode-card">
+            <h3>BoxPvP</h3>
+            <p>Demuestra tus habilidades en combate PvP</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+              <span>95% Popularidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="prev-btn">❮</button>
+        <button class="next-btn">❯</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 GreenCastle - Todos los derechos reservados</p>
+    </footer>
+
+  </main>
+
+  <button class="theme-switcher" onclick="window.themeToggle()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/>
+    </svg>
+  </button>
+
+  <script type="module">
+    import { initUtils } from './utils.js';
+    import { initCharts } from './charts.js';
+    import { initNavigation } from './navigation.js';
+    import { initParticles } from './particles.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const { checkServerStatus, initIntersectionObserver, initTheme } = initUtils();
+        const { initCountUp, initChart } = initCharts();
+        const { initMobileNav, initSmoothScroll, initResizeHandler } = initNavigation();
+        
+        // Initialize all components
+        checkServerStatus();
+        setInterval(checkServerStatus, 30000);
+        initIntersectionObserver();
+        initCountUp();
+        initChart();
+        initParticles();
+        initMobileNav();
+        initSmoothScroll();
+        initResizeHandler();
+        
+        // Initialize theme switcher
+        const { toggleTheme } = initTheme();
+        window.themeToggle = toggleTheme;
+      } catch (error) {
+        console.error('Initialization error:', error);
+      }
+    });
+  </script>
+</body>
+</html>
